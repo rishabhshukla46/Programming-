@@ -12,7 +12,7 @@ void solve(string str, int idx, int k, string& p){
     int max = -1;
     int id;
     for(int i = idx; i < str.length(); i++){
-        if(str[i] > max){
+        if(str[i] >= max){
             max = str[i];
             id = i;
         }
