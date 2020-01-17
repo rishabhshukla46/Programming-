@@ -3,15 +3,6 @@
 
 using namespace std;
 
-void display(vector<vector<int>>& chess){
-    for(int i = 0; i < chess.size(); i++){
-        for(int j = 0; j < chess[0].size(); j++){
-            cout<<chess[i][j]<<" ";
-        }
-        cout<<endl;
-    }
-}
-
 bool Isvalid(vector<vector<int>>& chess, int x, int y){
     if(x<0 || y<0 || x>=chess.size() || y>= chess[0].size() || chess[x][y] != 0){
         return false;
@@ -21,7 +12,6 @@ bool Isvalid(vector<vector<int>>& chess, int x, int y){
 
 bool solve(vector<vector<int>>& chess, vector<vector<int>>& dir, int sr, int sc, int moves){
     if(moves == chess.size() * chess[0].size()){
-        display(chess);
         return true;
     }
     bool res = false;
@@ -51,6 +41,5 @@ int main(){
     else{
         cout<<"false";
     }
-    //display(chess);
     return 0;
 }
